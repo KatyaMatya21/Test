@@ -1,0 +1,110 @@
+
+.sale {
+  position: relative;
+  margin-bottom: 34px;
+  padding: 0 0 31px 0;
+  border-bottom: 1px solid #e1e1e1;
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  &__date {
+    font-size: 12px;
+    line-height: 20px;
+    color: $grey;
+    margin: 0 0 8px 260px;
+
+    @media (max-width: 785px) {
+      margin-left: 0;
+    }
+  }
+
+  h3 {
+    margin: 0 0 28px 260px;
+
+    @media (max-width: 785px) {
+      margin-left: 0;
+    }
+
+    a {
+      color: $orange;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__pic {
+    width: 220px;
+    height: 150px;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    cursor: pointer;
+
+    @media (max-width: 785px) {
+      position: relative;
+      top: 0;
+      margin-bottom: 35px;
+      width: 430px;
+      height: 290px;
+    }
+
+    a {
+      display: block;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &:hover {
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__description {
+    margin: 0 0 26px 260px;
+
+    @media (max-width: 785px) {
+      margin-left: 0;
+    }
+  }
+
+  &__estimate {
+    margin-left: 260px;
+
+    @media (max-width: 785px) {
+      margin-left: 0;
+    }
+
+    &--active {
+
+      span {
+        color: $green;
+      }
+    }
+
+    &--pass {
+
+      span {
+        color: $red;
+      }
+    }
+  }
+}

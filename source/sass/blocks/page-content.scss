@@ -1,0 +1,25 @@
+.page-content {
+  width: 100%;
+  position: relative;
+
+  .container {
+    display: flex;
+  }
+}
+
+.page-content--top{
+  padding: 150px 0 0 0;
+
+  @media (max-width: 840px){
+    padding: 125px 0 0 0;
+  }
+
+
+  .left{
+    margin: 0;
+  }
+
+  .right__block{
+    margin-bottom: 40px;
+  }
+}

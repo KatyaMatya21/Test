@@ -1,0 +1,28 @@
+.stock {
+  width: 260px;
+  height: 80px;
+  background: url("#{$path}img/stock-pic.png") 0 0 no-repeat;
+  cursor: pointer;
+  margin: 0 0 70px 10px;
+
+  @media (max-width: 785px) {
+    width: 220px;
+    margin: 0 0 35px 20px;
+  }
+
+  .stock__text {
+    display: block;
+    color: $white;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 20px;
+    padding: 28px 0 27px 0;
+  }
+
+  &:hover {
+
+    .stock__text {
+      background: rgba(0, 0, 0, 0.3);
+    }
+  }
+}

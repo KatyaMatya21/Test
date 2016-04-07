@@ -1,0 +1,120 @@
+
+.index-slider{
+  position: relative;
+  width: 100%;
+  // Подсчет высоты слайдера относительно высоты окна (50px высота нижнего меню)
+  height: calc(100vh - 50px);
+
+
+  @media (max-width: 785px){
+    height: 450px;
+  }
+
+  &__list{
+    width: 100%;
+    height: 100%;
+  }
+
+  &__item{
+    width: 100%;
+    height: 100%;
+    outline: none;
+
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .slick-list,
+  .slick-track {
+    height: 100%;
+  }
+
+  &__cont{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .slick-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 960px;
+    margin: 0 auto;
+    height: 20px;
+    padding: 35px 0 35px 40px;
+    font-size: 0;
+    background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 91%);
+
+    @media (max-width: 1015px){
+      width: 50%;
+    }
+
+    li {
+      display: inline-block;
+      vertical-align: top;
+      background: #8b8b8c;
+      width: 10px;
+      height: 10px;
+      margin-right: 40px;
+      cursor: pointer;
+      margin-top: 5px;
+      font-size: 0;
+
+      &:hover{
+        background: $white;
+      }
+
+      &:active{
+        background: $green;
+      }
+
+      &:first-child {
+        margin-left: 310px;
+
+        @media (max-width: 1015px) {
+          // This is related to width of container.
+          // 310px is a width of left side plus padding.
+          // 50% of .slick-dots on the width is equal to 25% of full page width.
+          margin-left: calc(310px - 50%);
+        }
+
+        @media (max-width: 768px) {
+          // This formula does smth simular like prevent.
+          // Frankly, I don't know why here we must use 280px.
+          margin-left: calc(280px - 50%);
+        }
+      }
+
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+
+    .slick-active {
+      width: 16px;
+      height: 16px;
+      border: 2px solid $green;
+      background-color: transparent;
+      margin-top: 0;
+      pointer-events: none;
+
+      &:hover{
+        background-color: transparent;
+        cursor: auto;
+      }
+    }
+
+    button {
+      width: 100%;
+      height: 100%;
+      background: none;
+      border: none;
+      outline: none;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+body.page--cover{
+
+  .contact__description--mod{
+
+    span{
+      background-color: $green;
+      color: $white;
+      padding: 3px;
+    }
+  }
+}
+
+body.page--dark-cover{
+  overflow: hidden;
+}
+

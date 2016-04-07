@@ -1,0 +1,59 @@
+.feedback{
+
+  &__block{
+    font-size: 13px;
+    line-height: 13px;
+    margin-bottom: 20px;
+
+    @media(max-width:935px){
+      width: 430px;
+    }
+  }
+
+  &__correctness{
+    display: none;
+    vertical-align: top;
+    // Подгон отступа для красоты
+    margin: 36px -15px 0 0;
+
+    &--active{
+      display: inline-block;
+
+      @media(max-width:980px){
+        display: block;
+        margin-top: 10px;
+        overflow: hidden;
+      }
+    }
+  }
+
+  &__btn{
+    background: $green;
+    color: $white;
+    width: 200px;
+    padding: 14px 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 13px;
+    outline: none;
+    border: none;
+
+    &:hover{
+      background: $primary-color;
+    }
+    &:active{
+      background: $primary-color;
+      color: $green;
+    }
+
+    &--disabled{
+      opacity: 0.2;
+      pointer-events: none;
+    }
+
+    &--link{
+      display: block;
+      line-height: 13px;
+    }
+  }
+}

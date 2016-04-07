@@ -1,0 +1,46 @@
+
+.news {
+  margin: 0 0 0 10px;
+  width: 260px;
+
+  @media (max-width: 785px) {
+    width: 220px;
+    margin: 0 0 0 20px;
+  }
+
+  .news__title {
+    display: block;
+    color: $orange;
+    font-size: 20px;
+    line-height: 20px;
+    border-bottom: 1px solid $orange;
+    cursor: pointer;
+    margin-bottom: 35px;
+    width: 88px;
+
+    &:hover {
+      border-bottom: 1px solid transparent;
+    }
+  }
+
+  .news__item {
+    margin-bottom: 30px;
+  }
+
+  .news__date {
+    font-size: 12px;
+    line-height: 20px;
+    color: $grey;
+  }
+
+  .news__link {
+    line-height: 25px;
+    text-decoration: underline;
+    display: block;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+}

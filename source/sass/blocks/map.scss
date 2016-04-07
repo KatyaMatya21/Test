@@ -1,0 +1,16 @@
+.map{
+  height: 600px;
+  background-color: #000011;
+  // Посчет отступа слева для карты: 100%(ширина окна) минус 960px(контейнер) делим на два получаем оставшееся место побокам от контейнера, плюсуем 290px(ширина левого контейнера)
+  margin-left: calc((100% - 960px)/2 + 290px);
+  z-index: 5;
+
+  @media (max-width: 975px) {
+    margin-left: 290px;
+  }
+
+  @media (max-width: 785px) {
+    height: 400px;
+    margin-left: 260px;
+  }
+}

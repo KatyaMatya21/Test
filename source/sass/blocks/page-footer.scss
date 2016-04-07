@@ -1,0 +1,100 @@
+
+.page-footer {
+  width: 100%;
+  background-color: $primary-color;
+
+  @media (max-width: 768px){
+    min-width: 768px;
+  }
+
+  &__container {
+    width: 960px;
+    min-height: 60px;
+    color: $white;
+
+    @media screen and (max-width: 976px){
+      width: 100%;
+    }
+  }
+
+  &__wrap{
+    box-sizing: border-box;
+    padding: 20px 10px 17px 10px;
+
+    @media (max-width: 840px){
+      padding: 20px;
+    }
+  }
+
+  &__copy {
+    width: 225px;
+    float: left;
+
+    @media (max-width: 840px){
+      width: 140px;
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 5px 0 0;
+      width: 20px;
+      height: 20px;
+      background: url("#{$path}img/foot__copy.png") 0 0 no-repeat;
+    }
+
+    a {
+      color: $green;
+      text-decoration: underline;
+
+      @media (max-width: 840px){
+        margin: 0 0 0 25px;
+      }
+
+      &:hover{
+        text-decoration:none;
+      }
+    }
+
+  }
+
+  &__done {
+    width: 165px;
+    float: right;
+    color: $white;
+
+    @media (max-width: 840px){
+      width: 160px;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 0 0 3px;
+      width: 60px;
+      height: 25px;
+      background: url("#{$path}img/foot__done.png") 0 0 no-repeat;
+    }
+
+  }
+
+  &__contacts {
+    margin: 0 auto;
+    max-width: 332px;
+    text-align: left;
+    line-height: 25px;
+    padding-left: 30px;
+
+    @media (max-width: 840px){
+      max-width: 244px;
+      padding: 0;
+    }
+  }
+
+  &__address {
+    display: inline-block;
+    vertical-align: top;
+  }
+}

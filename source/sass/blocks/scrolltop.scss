@@ -1,0 +1,14 @@
+.scrolltop {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+  height: 200px;
+  width: 40px;
+  background: url("#{$path}img/up.png") 0 0 no-repeat;
+  font-size: 0;
+
+  &:hover {
+    background: url("#{$path}img/up.png") -40px 0 no-repeat;
+  }
+}

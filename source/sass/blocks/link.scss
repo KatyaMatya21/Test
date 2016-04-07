@@ -1,0 +1,12 @@
+.link{
+  color: $primary-color;
+  text-decoration: none;
+
+  &--green{
+    color: $green;
+  }
+
+  &--orange{
+    color: $orange;
+  }
+}

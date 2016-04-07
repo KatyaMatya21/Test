@@ -1,0 +1,37 @@
+{
+  "name": "archi",
+  "version": "1.0.0",
+  "description": "Редизайн сайта \"Архитектоника\"",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://bitbucket.org/donepro/archi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.0.3",
+    "browser-sync": "^2.9.12",
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-combine-mq": "^0.4.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-csscomb": "^3.0.6",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-minify": "0.0.5",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-postcss": "^6.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^2.1.0",
+    "gulp-uglify": "^1.4.2",
+    "run-sequence": "^1.1.4"
+  },
+  "dependencies": {
+    "del": "^2.0.2"
+  }
+}

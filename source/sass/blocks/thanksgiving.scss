@@ -1,0 +1,59 @@
+.thanksgiving {
+  display: none;
+
+  &__btn{
+    background: $green;
+    color: $white;
+    width: 200px;
+    padding: 14px 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 13px;
+    outline: none;
+    border: none;
+
+    &:hover{
+      background: $primary-color;
+    }
+    &:active{
+      background: $primary-color;
+      color: $green;
+    }
+
+    &--disabled{
+      opacity: 0.2;
+      &:hover{
+        background: $green;
+        color: $white;
+      }
+      &:active{
+        background: $green;
+        color: $white;
+      }
+    }
+
+    &--link{
+      display: block;
+      line-height: 13px;
+    }
+  }
+
+  &__text{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 25px;
+    color: $primary-color;
+    margin-bottom: 12px;
+
+    &:first-child{
+      @media(max-width: 880px){
+        margin-bottom: 0;
+      }
+    }
+
+    @media(max-width: 880px){
+      display: block;
+    }
+  }
+}

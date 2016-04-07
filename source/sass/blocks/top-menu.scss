@@ -1,0 +1,231 @@
+.top-menu {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: $white;
+  position: relative;
+
+  @media (max-width: 768px){
+    min-width: 768px;
+  }
+
+  &--index {
+    @media (min-width: 785px){
+      background-color: transparent;
+      color: $primary-color;
+
+      .top-menu__link {
+        padding: 35px 0;
+        color: $primary-color;
+
+        &::after{
+          background: url("#{$path}img/top-menu-arrow.png") -8px 0 no-repeat;
+        }
+
+        @media (max-width: 840px){
+          font-size: 15px;
+        }
+      }
+
+      .top-menu__item:first-child .top-menu__link {
+        padding-left: 10px;
+
+        @media (max-width: 960px){
+          text-align: center;
+        }
+      }
+
+      .top-menu__item:last-child .top-menu__link {
+        padding-right: 10px;
+
+        @media (max-width: 960px){
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &__container {
+
+    @media (max-width: 920px){
+      width: 100%;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    text-align: center;
+    flex-grow: 2;
+
+    span{
+      position: relative;
+
+      &::after{
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 0;
+        transition: width 0.4s;
+        background: transparent;
+        height: 3px;
+      }
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    padding: 15px 0;
+    font-size: 17px;
+    line-height: 20px;
+    color: $white;
+
+    &:hover{
+
+      span::after{
+        width: 100%;
+        background: $green;
+      }
+    }
+
+    @media (max-width: 800px){
+      font-size: 15px;
+    }
+  }
+
+  &__item--active{
+
+    span::after{
+      width: 100%;
+      background: $green;
+    }
+  }
+
+  &__item--open {
+    position: relative;
+
+    &:hover .top-menu__link {
+      background-color: $green;
+    }
+
+    &:hover .top-menu__link::before {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid $green;
+      z-index: 5;
+    }
+
+    .top-menu__link::after{
+      content: "";
+      position: relative;
+      top: -3px;
+      display: inline-block;
+      background: url("#{$path}img/top-menu-arrow.png") 0 0 no-repeat;
+      width: 8px;
+      height: 4px;
+      transition: transform 0.5s;
+    }
+
+    &:hover .top-menu__link::after{
+      transition: transform 0.5s;
+      transform: rotate(180deg);
+    }
+
+    &:hover .top-menu__fall {
+      display: flex;
+    }
+  }
+
+  &__fall {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    max-height: 180px;
+    height: 180px;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.91);
+    z-index: 1;
+    width: 100%;
+    left: 0;
+    padding: 40px 0;
+  }
+
+  &__fall-item {
+    display: block;
+    color: $primary-color;
+    margin-top: 25px;
+
+    &:first-child{
+      margin-top: 0;
+    }
+  }
+
+  &__fall-link {
+    border-bottom: 1px solid rgba(51, 51, 51, 0.5);
+
+    &:hover{
+      color: $green;
+      border-bottom:none;
+    }
+  }
+
+  .top-menu__fall-item:nth-child(5n) {
+    margin-top: 0;
+  }
+
+  &__fall--two-col {
+    width: 485px;
+
+    .top-menu__fall-item{
+      text-align: left;
+      padding-left: 36px;
+    }
+  }
+
+  .top-menu__item:first-child{
+    flex-grow: 1;
+  }
+
+  .top-menu__item:first-child .top-menu__link {
+    padding-left: 10px;
+    text-align: left;
+
+    @media (max-width: 800px){
+      padding-left: 0;
+      text-align:center;
+    }
+  }
+
+  .top-menu__item:last-child{
+    flex-grow: 1;
+  }
+
+  .top-menu__item:last-child .top-menu__link {
+    padding-right: 10px;
+    text-align: right;
+
+    @media (max-width: 800px){
+      padding-right: 0;
+      text-align:center;
+    }
+  }
+}
+
+

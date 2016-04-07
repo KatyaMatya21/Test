@@ -1,0 +1,53 @@
+.contact {
+  width: 260px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 60px;
+
+  @media (max-width: 950px) {
+    display: block;
+    width: auto;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+
+    @media (max-width: 950px){
+      margin-bottom:0;
+    }
+  }
+
+  &__item {
+    font-size: 14px;
+    min-height: 85px;
+    margin-bottom: 20px;
+
+    @media (max-width: 950px){
+      min-height: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    color: $orange;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  &__description {
+    .link {
+      text-decoration: underline;
+
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+}
+
